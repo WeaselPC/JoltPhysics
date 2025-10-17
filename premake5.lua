@@ -1,7 +1,7 @@
 local JOLT_DEFINES = {
   -- precision / determinism
   -- "JPH_DOUBLE_PRECISION",         -- OFF per your config
-  -- "JPH_CROSS_PLATFORM_DETERMINISTIC",
+   "JPH_CROSS_PLATFORM_DETERMINISTIC",
   -- allocators / asserts / fp except
   -- "JPH_DISABLE_CUSTOM_ALLOCATOR",
   -- "JPH_DISABLE_TEMP_ALLOCATOR",
@@ -10,7 +10,7 @@ local JOLT_DEFINES = {
   -- std::vector switch
   -- no "JPH_USE_STD_VECTOR",
   -- debug renderer always on
-  -- "JPH_DEBUG_RENDERER",
+   "JPH_DEBUG_RENDERER",
   -- object layer bits (if you set it)
   -- "JPH_OBJECT_LAYER_BITS=32",
   -- SIMD feature gates (ONLY add those you enabled for Jolt!)
