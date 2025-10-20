@@ -39,6 +39,8 @@ project "Jolt"
     -- Floating-point exceptions: OFF (no JPH_FLOATING_POINT_EXCEPTIONS_ENABLED)
 
     defines { JOLT_DEFINES }
+
+    UseMaxPerf()
     
     -- Common platform hygiene
     filter "toolset:msc*"
