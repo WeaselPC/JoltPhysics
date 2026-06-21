@@ -47,8 +47,8 @@ TARGETDIR = bin/Debug-linux-x86_64/Jolt
 TARGET = $(TARGETDIR)/libJolt.a
 OBJDIR = bin-int/Debug-linux-x86_64/Jolt
 DEFINES += -DJPH_CROSS_PLATFORM_DETERMINISTIC -DJPH_DEBUG_RENDERER -DDEBUG -D_DEBUG
-ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g -Wall -Wextra
-ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -Wall -Wextra -std=c++17
+ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g -Wall -Wextra -fpermissive
+ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -Wall -Wextra -std=c++17 -fpermissive
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
 
 else ifeq ($(config),release_x64)
@@ -56,8 +56,8 @@ TARGETDIR = bin/Release-linux-x86_64/Jolt
 TARGET = $(TARGETDIR)/libJolt.a
 OBJDIR = bin-int/Release-linux-x86_64/Jolt
 DEFINES += -DJPH_CROSS_PLATFORM_DETERMINISTIC -DJPH_DEBUG_RENDERER -DNDEBUG
-ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -ffast-math
-ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -std=c++17 -ffast-math
+ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -fpermissive -ffast-math
+ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -std=c++17 -fpermissive -ffast-math
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -flto -s -flto
 
 else ifeq ($(config),dist_x64)
@@ -65,8 +65,8 @@ TARGETDIR = bin/Dist-linux-x86_64/Jolt
 TARGET = $(TARGETDIR)/libJolt.a
 OBJDIR = bin-int/Dist-linux-x86_64/Jolt
 DEFINES += -DJPH_CROSS_PLATFORM_DETERMINISTIC -DJPH_DEBUG_RENDERER
-ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -ffast-math
-ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -std=c++17 -ffast-math
+ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -fpermissive -ffast-math
+ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -flto -O3 -mavx2 -Wall -Wextra -std=c++17 -fpermissive -ffast-math
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -flto -s -flto
 
 endif
