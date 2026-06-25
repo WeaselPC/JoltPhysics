@@ -57,4 +57,7 @@ project "Jolt"
     filter "configurations:Release"
         defines { "NDEBUG" }
         optimize "Speed"
+    filter "configurations:Dist"
+        defines { "NDEBUG" }
+        optimize "Speed"
     filter {}
